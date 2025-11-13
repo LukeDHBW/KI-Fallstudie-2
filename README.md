@@ -1,2 +1,3 @@
 # KI-Fallstudie-2
-Gruppenarbeit Prgrammieren
+Gruppenarbeit Programmieren
+Teilnehmer: Luke, Sohrab, Lukasz, Malik, Max
