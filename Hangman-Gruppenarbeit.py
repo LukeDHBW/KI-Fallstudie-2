@@ -1,5 +1,7 @@
+
 import random
 
+# Wörterliste
 words = ("Abendbrot", "Abenteuer", "Abfalleimer", "Abschluss", "Abteilung", "Achterbahn", "Ackerbau", "Adlerschwinge",
     "Akkuschrauber", "Aktentasche", "Aktivität", "Albtraum", "Alligator", "Alufolie", "Ameisenbär", "Amselgesang",
     "Ananas", "Andenken", "Angebot", "Anglerfisch", "Anhänger", "Anschlag", "Antilope", "Antwort",
@@ -38,6 +40,7 @@ words = ("Abendbrot", "Abenteuer", "Abfalleimer", "Abschluss", "Abteilung", "Ach
     "Fischkutter", "Fischmarkt", "Fischteich", "Flachland", "Flamingo", "Flaschenpost", "Fleischer", "Fleischerei",
     "Fleißarbeit", "Fliegenpilz", "Flohmarkt", "Flugblatt", "Flughafen", "Flugplatz", "Flugzeug", "Flussbett")
 
+# ASCII-Art für Galgen + Männchen
 hangman_art = {
     0: (
         "        ",
@@ -74,7 +77,7 @@ hangman_art = {
     4: (
         "  +-----+",
         "  |     |",
-        "  o     |",
+        "  O     |",
         "        |",
         "        |",
         "       / \\"
@@ -82,7 +85,7 @@ hangman_art = {
     5: (
         "  +-----+",
         "  |     |",
-        "  o     |",
+        "  O     |",
         "  |     |",
         "        |",
         "       / \\"
@@ -90,12 +93,11 @@ hangman_art = {
     6: (
         "  +-----+",
         "  |     |",
-        "  o     |",
+        "  O     |",
         " /|\\    |",
         "        |",
         "       / \\"
     ),
-    
     7: (
         "  +-----+",
         "  |     |",
@@ -104,19 +106,20 @@ hangman_art = {
         " / \\    |",
         "       / \\"
     ),
-
 }
-    
 
+# Anzeige des Galgens
 def display_man(wrong_guesses):
     print("***********")
     for line in hangman_art[wrong_guesses]:
         print(line)
     print("***********")
 
+# Anzeige des aktuellen Wortes
 def display_hint(hint):
     print(" ".join(hint))
 
+# Anzeige des vollständigen Wortes
 def display_answer(answer):
     print(" ".join(answer))
 
@@ -125,44 +128,52 @@ def main():
     hint = ["_"] * len(answer)
     wrong_guesses = 0
     guessed_letters = set()
+    max_wrong = len(hangman_art) - 1
     is_running = True
 
     while is_running:
+        print("-" * 30)  # Visuelle Abtrennung
         display_man(wrong_guesses)
         display_hint(hint)
-        guess = input("Gib einen Buchstaben ein:").lower()
+        print(f"Geratene Buchstaben: {' '.join(sorted(guessed_letters))}")
+        
+        guess = input("Gib einen Buchstaben ein: ").upper()
 
+        # Eingabe validieren
         if len(guess) != 1 or not guess.isalpha():
-            print("Einfach nur ein Buchstabe bitte")
+            print("❗ Bitte gib einen einzelnen Buchstaben ein.")
             continue
 
+        # Prüfen, ob Buchstabe schon geraten wurde
         if guess in guessed_letters:
-            print(f"{guess} wurde bereits geraten")
+            print(f"❗ {guess} wurde bereits geraten.")
+            continue
 
         guessed_letters.add(guess)
 
+        # Prüfen, ob Buchstabe im Wort ist
         if guess in answer:
             for i in range(len(answer)):
                 if answer[i] == guess:
                     hint[i] = guess
         else:
-            wrong_guesses +=1
+            wrong_guesses += 1
+            print(f"❌ Falsch! Fehler: {wrong_guesses}/{max_wrong}")
 
+        
         if "_" not in hint:
+            print("-" * 30)
             display_man(wrong_guesses)
             display_answer(answer)
-            print("GEWONNEN!")
+            print("🎉 GEWONNEN!")
             is_running = False
-        elif wrong_guesses >= len(hangman_art) - 1:
+        elif wrong_guesses >= max_wrong:
+            print("-" * 30)
             display_man(wrong_guesses)
             display_answer(answer)
-            print("VERLOREN!")
+            print("⚰️  VERLOREN!⚰️")
             is_running = False
-            
-
-
 
 if __name__ == "__main__":
     main()
 
-    
