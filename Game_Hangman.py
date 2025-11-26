@@ -1,7 +1,7 @@
 
 import random
-from words import WORDS
-from art import display_man, HANGMAN_ART
+from Words_Hangman import words
+from Galgen_Hangman import display_man, HANGMAN_ART
 
 
 def display_hint(hint):
@@ -13,7 +13,7 @@ def display_answer(answer):
 
 
 def run_game():
-    answer = random.choice(WORDS).upper()
+    answer = random.choice(words).upper()
     hint = ["_"] * len(answer)
     wrong_guesses = 0
     guessed_letters = set()
@@ -50,7 +50,7 @@ def run_game():
             print("-" * 30)
             display_man(wrong_guesses)
             display_answer(answer)
-            print("🎉 GEWONNEN!")
+            print("🎉 GEWONNEN!🎉")
             is_running = False
         elif wrong_guesses >= max_wrong:
             print("-" * 30)
