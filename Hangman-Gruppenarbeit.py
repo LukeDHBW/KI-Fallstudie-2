@@ -38,27 +38,75 @@ words = ("Abendbrot", "Abenteuer", "Abfalleimer", "Abschluss", "Abteilung", "Ach
     "Fischkutter", "Fischmarkt", "Fischteich", "Flachland", "Flamingo", "Flaschenpost", "Fleischer", "Fleischerei",
     "Fleißarbeit", "Fliegenpilz", "Flohmarkt", "Flugblatt", "Flughafen", "Flugplatz", "Flugzeug", "Flussbett")
 
-hangman_art = {0: ("   ",
-                   "   ",
-                   "   "), 
-               1: (" o ",
-                   "   ",
-                   "   "),
-               2: (" o ",
-                   " | ",
-                   "   "),
-               3: (" o ",
-                   "/| ",
-                   "   "),
-               4: (" o ",
-                   "/|\\",
-                   "   "),
-               5: (" o ",
-                   "/|\\",
-                   "/  "),
-               6: (" o ",
-                   "/|\\",
-                   "/ \\")}
+hangman_art = {
+    0: (
+        "        ",
+        "        ",
+        "        ",
+        "        ",
+        "        ",
+        "        "
+    ),
+    1: (
+        "         ",
+        "        |",
+        "        |",
+        "        |",
+        "        |",
+        "       / \\"
+    ),
+    2: (
+        "  +-----+",
+        "        |",
+        "        |",
+        "        |",
+        "        |",
+        "       / \\"
+    ),
+    3: (
+        "  +-----+",
+        "  |     |",
+        "        |",
+        "        |",
+        "        |",
+        "       / \\"
+    ),
+    4: (
+        "  +-----+",
+        "  |     |",
+        "  o     |",
+        "        |",
+        "        |",
+        "       / \\"
+    ),
+    5: (
+        "  +-----+",
+        "  |     |",
+        "  o     |",
+        "  |     |",
+        "        |",
+        "       / \\"
+    ),
+    6: (
+        "  +-----+",
+        "  |     |",
+        "  o     |",
+        " /|\\    |",
+        "        |",
+        "       / \\"
+    ),
+    
+    7: (
+        "  +-----+",
+        "  |     |",
+        " 💀     |",
+        " /|\\    |",
+        " / \\    |",
+        "       / \\"
+    ),
+
+}
+    
 
 def display_man(wrong_guesses):
     print("***********")
