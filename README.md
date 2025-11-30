@@ -8,6 +8,12 @@ Testverantwortlicher: Sohrab
 Präsentationsverantwortlicher: Lukasz 
 KI-Prüfer: Malik
 
+
+Organisatorischer Ablauf:
+Wir haben uns am 13. November, nachdem die Gruppen eingeteilt wurden, dazu entschieden, eine WhatsApp-Gruppe zu erstellen. In dieser WhatsApp-Gruppe standen wir dann im ständigen Kontakt, haben außerdem direkt das GitHub-Repository erstellt und überlegt, welches Projekt wir umsetzen wollen. Nachdem wir uns darauf geeinigt hatten, dass Hangman das richtige Projekt für uns ist, haben wir die Rollenverteilung festgelegt. Diese wurde zunächst frei nach individuellem Interesse verteilt, sodass jeder sich die Aufgaben aussuchen konnte, die ihm am meisten liegen. Die Rollenverteilung, wie oben bereits beschrieben, bedeutet dabei nicht, dass eine Person alles alleine erledigt hat, sondern wir haben uns gegenseitig immer unterstützt und geholfen. Außerdem haben wir während dieser ersten Session Ideen, Fragen und Anreize gesammelt. Diese erste Sitzung dauerte etwa zwei bis drei Stunden. Nach einer kleinen Pause haben wir uns am 26.11 nach unseren Vorlesungen in einem Gruppenraum getroffen, da wir der Meinung sind, dass persönliche Treffen vor Ort einfach besser geeignet sind, um als Team effektiv zusammenzuarbeiten. In dieser Sitzung haben wir die Feinschliffe am Projekt vorgenommen, die Dokumentation weiter ausgeführt und offene Punkte besprochen.
+
+
+
 Unser Projekt ist eine einfache Konsolenversion des Spiels „Hangman“. Das Programm wählt zu Beginn ein zufälliges Wort aus einer Wortliste aus. Anschließend versucht der Spieler, dieses Wort durch das Eingeben einzelner Buchstaben zu erraten. Für jeden falschen Versuch wird ein weiterer Teil der Hangman-Grafik angezeigt. Das Spiel endet, sobald entweder das Wort vollständig erraten wurde oder die maximale Anzahl an Fehlversuchen erreicht ist.
 
 Die Umsetzung besteht aus mehreren Python-Dateien, die miteinander arbeiten. Die Hauptlogik befindet sich in der Datei, die das Spiel ausführt. Zusätzlich werden zwei externe Dateien für die Wortliste und die Darstellung des Galgens verwendet.
