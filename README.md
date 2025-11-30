@@ -2,10 +2,11 @@
 Gruppenarbeit Programmieren
 Teilnehmer: Luke, Sohrab, Lukasz, Malik, Max
 
-
-
-
-
+Developer-Präsident: Luke
+Dokumentations-Don: Max
+Testverantwortlicher: Sohrab
+Präsentationsverantwortlicher: Lukasz 
+KI-Prüfer: Malik
 
 Unser Projekt ist eine einfache Konsolenversion des Spiels „Hangman“. Das Programm wählt zu Beginn ein zufälliges Wort aus einer Wortliste aus. Anschließend versucht der Spieler, dieses Wort durch das Eingeben einzelner Buchstaben zu erraten. Für jeden falschen Versuch wird ein weiterer Teil der Hangman-Grafik angezeigt. Das Spiel endet, sobald entweder das Wort vollständig erraten wurde oder die maximale Anzahl an Fehlversuchen erreicht ist.
 
