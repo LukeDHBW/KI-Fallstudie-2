@@ -1,15 +1,108 @@
-Reflexion zur Nutzung von KI-Unterstützung im Projekt
+KI-Reflexion zum Hangman-Projekt
 
-Im Rahmen unseres Projekts haben wir an mehreren Stellen gezielt auf künstliche Intelligenz zurückgegriffen, um Arbeitsprozesse zu beschleunigen, unseren Code zu verbessern und technische Probleme effizienter zu lösen. Die Integration von KI-Werkzeugen stellte für uns eine wichtige Ergänzung dar, da sie uns sowohl bei der Konzeption als auch bei der konkreten Umsetzung unseres Hangman-Spiels unterstützte.
+Im Rahmen unseres Hangman-Projekts spielte der Einsatz von KI eine zentrale Rolle, sowohl zur Unterstützung bei der Programmierung als auch zur Optimierung des Entwicklungsprozesses. Die folgenden Punkte reflektieren, wie wir KI verwendet haben, welche Vorschläge hilfreich waren, welche Herausforderungen aufgetreten sind und wie die Zusammenarbeit im Team dadurch beeinflusst wurde.
 
-Der erste wesentliche Einsatz von KI fand bereits zu Beginn des Projekts statt. Für das Spiel benötigten wir ein 250-Wort-Tupel, das als Grundlage für die möglichen Begriffe dienen sollte. Die manuelle Erstellung einer solch umfangreichen Wortliste wäre sehr zeitintensiv gewesen, weshalb wir uns entschieden, diesen Schritt mithilfe einer KI zu automatisieren. Die KI generierte in kurzer Zeit eine geeignete Wortauswahl, wodurch wir uns direkt den spielrelevanten Funktionen und der Programmierlogik widmen konnten. Dieser erste Einsatz zeigte uns bereits, wie KI bei klar abgegrenzten, repetitiven oder datenintensiven Aufgaben eine enorme Zeitersparnis ermöglicht.
+1. Einsatzbereiche der KI
 
-Ein zweiter, noch zentralerer Anwendungsbereich ergab sich bei der Verbesserung der Funktionsweise unseres Hangman-Codes. Während des Programmierens stellten wir fest, dass das Spiel nicht korrekt damit umging, wenn Nutzende denselben Buchstaben mehrfach eingaben. Um dies zu lösen, konsultierten wir ChatGPT und stellten der KI den vollständigen bisherigen Code zur Verfügung, sodass sie kontextbezogene Lösungsvorschläge liefern konnte. Die KI generierte daraufhin einen Beispielcode, der eine zusätzliche Liste guessed_letters einführte. Diese Liste speicherte alle bereits verwendeten Buchstaben und wurde durch eine Schleife kontinuierlich aktualisiert. Dadurch wurde sichergestellt, dass doppelte Eingaben nicht als neue Versuche gewertet wurden und die Nutzerfreundlichkeit des Spiels deutlich gesteigert wurde.
+Wir setzten KI an mehreren Stellen gezielt ein:
 
-Mit zunehmender Dauer des Projekts wurde unser Code jedoch immer umfangreicher und schwerer zu überblicken. Um eine bessere Struktur, höhere Lesbarkeit und saubere Funktionen zu gewährleisten, setzten wir zusätzlich die KI „Perplexity“ ein. Mithilfe dieser KI analysierten wir den bestehenden Code, identifizierten Redundanzen und erhielten Optimierungsvorschläge, die sowohl technische Verbesserungen als auch stilistische Vereinfachungen beinhalteten. Die Zusammenarbeit mit unterschiedlichen KI-Systemen ermöglichte uns dabei, verschiedene Perspektiven und Lösungsansätze zu vergleichen.
+Generierung eines 250-Wort-Tupels
+Um eine ausreichende Menge an Wörtern für das Hangman-Spiel zu erhalten, ließen wir die Liste von einer KI erstellen. Dieser Arbeitsschritt wäre manuell sehr zeitaufwendig gewesen, sodass KI hier vor allem zur Effizienzsteigerung diente.
 
-Bei der gesamten Nutzung von KI legten wir großen Wert auf die Qualität unserer Eingaben. Uns war bewusst, dass KI-Ausgaben stark von der Präzision der Prompts abhängen. Deshalb formulierten wir unsere Fragen möglichst ausführlich und stellten der KI stets den vollständigen Code beziehungsweise den gesamten Kontext zur Verfügung. Dies führte dazu, dass die KI deutlich relevantere Vorschläge machen konnte und wir weniger Zeit mit Rückfragen verbringen mussten. Gleichzeitig lernten wir im Verlauf des Projekts, wie wichtig es ist, KI-generierte Lösungen kritisch zu hinterfragen, anzupassen und eigenständig in den Code zu integrieren.
+Verbesserung der Spielmechanik
+Ein zentrales Problem bestand darin, dass doppelte Buchstabeneingaben als neue Versuche gewertet wurden. ChatGPT schlug dafür eine Lösung mit einer zusätzlichen Liste guessed_letters vor, um bereits verwendete Buchstaben zu speichern. Dies verbesserte die Fairness und Benutzerfreundlichkeit des Spiels.
 
-Ein wesentlicher Grund, weshalb wir KI so intensiv genutzt haben, war die Zeitersparnis. Viele Aufgaben – wie das Generieren langer Listen, das Debugging oder das Umstrukturieren längerer Codeabschnitte – konnten durch den Einsatz von KI deutlich schneller gelöst werden, als es manuell möglich gewesen wäre. Gleichzeitig diente KI für uns als Lernwerkzeug: Durch die Vorschläge der KI konnten wir neue Programmiertechniken kennenlernen, bessere Lösungswege verstehen und unsere eigene Problemlösungskompetenz erweitern.
+Fehlersuche und Code-Optimierung
+Da unser Code im Laufe des Projekts immer länger und unübersichtlicher wurde, nutzten wir die KI Perplexity, um Struktur, Lesbarkeit und Effizienz zu verbessern. Die KI half uns, redundante Codeabschnitte zu erkennen, Funktionen klarer zu trennen und unnötige Wiederholungen zu vermeiden.
 
-Insgesamt lässt sich festhalten, dass der Einsatz von KI in unserem Projekt nicht nur funktional, sondern auch didaktisch wertvoll war. Die KI half uns, effizienter zu arbeiten, Fehler schneller zu identifizieren und eine professionellere Version unseres Hangman-Spiels zu entwickeln. Gleichzeitig bot sie uns eine Lernunterstützung, die in traditionellen Entwicklungsprozessen oft weniger zugänglich ist. Obwohl KI nicht den eigenen Denkprozess ersetzt, stellte sie für uns ein hilfreiches, vielseitig einsetzbares Werkzeug dar, das den Projekterfolg wesentlich unterstützt hat.
+2. Übernommene und verworfene KI-Vorschläge
+
+Übernommen:
+
+Einführung der Liste guessed_letters
+
+Vorschläge zur Vereinfachung langer If-Strukturen
+
+Verbesserungen im Bereich Eingabevalidierung
+
+Kürzere und logischere Funktionsaufteilung
+
+Verworfen:
+
+Codestücke, die zu komplex oder ineffizient waren
+
+Vorschläge, die nicht mit unserem bestehenden Variablenmodell kompatibel waren
+
+Alternativen, die das Programm unnötig aufgebläht hätten
+
+Wir stellten fest, dass KI häufig sehr umfangreiche Lösungen liefert, die funktional, aber nicht immer sinnvoll für unsere Projektgröße waren.
+
+3. Einfluss der KI auf unser Programmierverständnis
+
+Die KI wirkte sich positiv auf unser Verständnis aus:
+
+Sie half uns, Fehlerquellen zu erkennen, die wir selbst übersehen hatten.
+
+Durch die Erklärungen der KI verstanden wir wichtige Prinzipien wie Listenverwaltung, Zustandskontrolle und Schleifenlogik besser.
+
+Die Strukturierungsvorschläge der KI zeigten uns, wie man Code sauberer und modularer aufbaut.
+
+Gleichzeitig mussten wir lernen, KI-Antworten kritisch zu prüfen, da nicht jeder Vorschlag korrekt oder optimal war.
+
+Somit war KI gleichzeitig Werkzeug und Lernhilfe.
+
+4. Grenzen der KI
+
+Es gab mehrere Situationen, in denen die KI uns nicht weiterhelfen konnte:
+
+Teilweise erzeugte die KI Code, der syntaktisch richtig, aber logisch unbrauchbar war.
+
+Manche Lösungen passten nicht zu unserem bisherigen Aufbau oder führten neue Fehler ein.
+
+Die KI erkannte nicht immer den gesamten Kontext des Projekts, selbst wenn wir den Code mitgegeben hatten.
+
+Fehlinterpretationen von Variablen oder Game-Flow-Logik kamen gelegentlich vor.
+
+Diese Grenzen machten deutlich, dass menschliche Kontrolle weiterhin entscheidend ist.
+
+5. Risiken beim Einsatz von KI
+
+Wir identifizierten mehrere Risiken:
+
+Abhängigkeit: Die Versuchung, Probleme sofort an die KI abzugeben, anstatt selbst zu überlegen.
+
+Fehlinformationen: KI-Antworten wirken oft sehr überzeugend, sind aber nicht immer korrekt.
+
+Komplexität: Teilweise führte KI-generierter Code zu unnötig komplizierten Strukturen.
+
+Verlust der eigenen Problemlösungskompetenz, wenn man nicht bewusst reflektiert.
+
+Wir begegneten diesen Risiken durch kritisches Hinterfragen und gründliches Testen aller KI-Vorschläge.
+
+6. Team- und Projektreflexion
+
+Die Zusammenarbeit im Team wurde durch den KI-Einsatz beeinflusst:
+
+Rollenverteilung: Eine Person übernahm meist das Formulieren präziser Prompts, eine andere das Testen der KI-Vorschläge.
+
+Koordination: KI half uns, schneller gemeinsame Lösungen zu entwickeln, aber wir mussten die Vorschläge gemeinsam prüfen und anpassen.
+
+Herausforderungen: Nicht alles ließ sich direkt übernehmen — wir diskutierten oft, welche Lösung die sinnvollste war.
+
+Positiv war, dass der KI-Einsatz unsere Kommunikation strukturierte, da wir klären mussten, welche Informationen für die KI wichtig sind.
+
+7. Was wir beim nächsten Projekt anders machen würden
+
+KI gezielter und nicht zu häufig einsetzen
+
+Vorab den Code klarer strukturieren, um KI-Antworten besser integrieren zu können
+
+Prompts noch präziser formulieren
+
+KI nicht als Erstlösung, sondern als Ergänzung nutzen
+
+Mehr Zeit für manuelle Problemlösung einplanen
+
+Fazit
+
+Die KI war ein wertvolles Werkzeug im Projekt, das uns Zeit ersparte, neue Ideen vermittelte und zur Verbesserung unseres Codes beitrug. Gleichzeitig zeigten sich klare Grenzen und Risiken, die uns bewusst machten, wie wichtig kritisches Denken und kontrolliertes Vorgehen sind. Insgesamt hat der KI-Einsatz unser Projekt technisch und didaktisch bereichert, ohne den eigenen Lernprozess zu ersetzen.
