@@ -1,0 +1,77 @@
+GEPLANTE FUNKTIONEN:
+- Bonus für ohne fehler gewinnen
+
+
+Developer-Präsident: Luke
+Dokumentations-Don: Max
+Testverantwortlicher: Sohrab
+Präsentationsverantwortlicher: Lukasz 
+KI-Prüfer: Malik
+
+ARBEITSWEISEN
+• Technische Dokumentation: Ein vollst¨andiges README.md im GitHub-Repository
+beschreibt Ziel, Aufbau und Nutzung des Programms. Es enth¨alt:
+– Projektbeschreibung und Hauptfunktionen
+– Struktur (Klassen, Module, Libraries)
+– Installations- und Ausf¨uhrungsanleitung
+– Beispielhafte Eingaben und Ausgaben
+• Entwicklungsdokumentation: Halten Sie Ihren Arbeitsprozess in GitHub nachvollziehbar fest: sinnvolle Commit-Nachrichten, Branches, Pull Requests und eine klare
+Projektstruktur (src/, tests/, docs/).
+• Benutzerdokumentation: Kurze Anleitung zur Bedienung des Programms (Start,
+Eingaben, Ausgaben, m¨ogliche Fehlermeldungen).
+
+KI-REFLEXION
+Neben der Programmierarbeit und der Dokumentation ist die Reflexion ¨uber den Prozess
+ein wichtiger Teil der Bewertung.
+a) Inhalte der Reflexion
+• Dokumentieren Sie, wie und wo KI eingesetzt wurde.
+• Beschreiben Sie, welche Vorschl¨age der KI n¨utzlich waren, welche Sie verworfen
+haben und warum.
+• Reflektieren Sie die Zusammenarbeit im Team: Was hat gut funktioniert, was
+war herausfordernd?
+b) KI-Reflexion – Leitfragen
+• Wof¨ur wurde KI konkret eingesetzt (z. B. Codegenerierung, Fehlersuche, Ideenfindung)?
+• Welche Vorschl¨age haben Sie ¨ubernommen – und warum?
+• Wie hat die KI Ihr Verst¨andnis von Programmierung beeinflusst?
+• Wo war die KI nicht in der Lage Ihnen weiterzuhelfen?
+• Welche Risiken haben Sie beim Einsatz von KI festgestellt?
+c) Team- und Projektreflexion – Leitfragen
+• Wie war die Rollenverteilung im Team (Lead Developer etc.)?
+• Welche Strategien haben geholfen, die Arbeit zu koordinieren?
+• Was w¨urden Sie beim n¨achsten Projekt anders angehen?
+
+ABGABE
+• Abgabefrist: 01.12.2025, 08.00 Uhr
+• Abzugeben sind:
+– GitHub-Link zum vollst¨andigen Projekt (inkl. Dokumentation)
+– 1–2 seitige schriftliche Reflexion (PDF)
+– Pr¨asentationsfolien (PDF oder Online-Link)
+• Abgabemodus: Die Abgabe erfolgt via Mail an laura.schmidt@dhbw.de
+
+PRÄSENTATION
+• Pr¨asentationstermin: 01.12.2025
+• Pr¨asentationsdauer: je Team 15 Minuten + 5 Minuten Q&A
+• Empfohlener Aufbau:
+1. Projektidee und Zielsetzung
+2. Kurze Live-Demo
+3. Technischer Uberblick (Struktur, Klassen, Libraries, Besonderheiten) ¨
+4. Teamorganisation (Rollen, Aufgaben, GitHub-Workflow)
+5. Zusammenarbeit und Herausforderungen
+6. Einsatz von KI im Projekt
+7. Fazit: wichtigste Erkenntnisse aus Technik und Teamarbeit
+
+BEWERTUNG
+• Die Gruppenarbeit kann bis zu 10 Bonuspunkte f¨ur die Modulabschlussklausur
+einbringen.
+• Diese Punkte werden zu Ihrer Klausurnote addiert (z. B. 100 + 10 = 110 Punkte /
+100 m¨oglich).
+• Die Bonuspunkte werden nach folgender Gewichtung vergeben:
+– Technische Umsetzung (40 %) – Funktionalit¨at, Codequalit¨at, OOP, Fehlerbehandlung, Libraries, Tests
+– Teamarbeit und Organisation (20 %) – Rollenverteilung, GitHub-Nutzung,
+Kommunikation, Arbeitsstruktur
+– Reflexion und KI-Einsatz (20 %) – bewusster, kritischer Umgang mit KI
+und nachvollziehbare Reflexion
+– Pr¨asentation (20 %) – Klarheit, Struktur, Zeitmanagement, Demonstration
+des Projekts
+• Hinweis: Die Bonuspunkte werden nur vergeben, wenn das Projekt vollst¨andig
+abgegeben, pr¨asentiert und dokumentiert ist.
