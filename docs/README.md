@@ -98,16 +98,16 @@ Umgesetzt wurde die Oberfläche mit der Python-Standardbibliothek tkinter, die o
 ![Spielstart – leerer Galgen und verdecktes Wort](docs/screenshots/01_spielstart.png)
 
 **Projektstruktur**  
-hangman/
-    src/
-        main.py               # Einstiegspunkt: startet die GUI über gui.main()
-        gui.py                # GUI-Klasse HangmanGUI mit tkinter
-        Game_Hangman.py       # ursprüngliche CLI-Spiellogik (Semester 1, unverändert)
-        Galgen_Hangman.py     # ASCII-Grafiken (HANGMAN_ART-Dictionary + display_man())
-        Words_Hangman.py      # Wortliste als Tupel (unverändert)
-    docs/
-        README.md
-Hinweis zur Struktur: Game_Hangman.py bleibt als erhaltene CLI-Version vollständig im Projekt. Die GUI greift nicht auf diese Datei zurück, sondern implementiert die Spiellogik eigenständig innerhalb der HangmanGUI-Klasse. Gemeinsam genutzt werden weiterhin Words_Hangman.py (Wortauswahl) und Galgen_Hangman.py (ASCII-Darstellung des Galgens über das HANGMAN_ART-Dictionary).
+hangman/  
+    src/  
+        main.py               # Einstiegspunkt: startet die GUI über gui.main()  
+        gui.py                # GUI-Klasse HangmanGUI mit tkinter  
+        Game_Hangman.py       # ursprüngliche CLI-Spiellogik (Semester 1, unverändert)  
+        Galgen_Hangman.py     # ASCII-Grafiken (HANGMAN_ART-Dictionary + display_man())  
+        Words_Hangman.py      # Wortliste als Tupel (unverändert)  
+    docs/  
+        README.md  
+Hinweis zur Struktur: Game_Hangman.py bleibt als erhaltene CLI-Version vollständig im Projekt. Die GUI greift nicht auf diese Datei zurück, sondern implementiert die Spiellogik eigenständig innerhalb der HangmanGUI-Klasse. Gemeinsam genutzt werden weiterhin Words_Hangman.py (Wortauswahl) und Galgen_Hangman.py (ASCII-Darstellung des Galgens über das HANGMAN_ART-Dictionary).  
 
 **Technische Umsetzung:**  
 Die gesamte GUI ist in der Klasse HangmanGUI in gui.py umgesetzt. Das Fenster hat eine feste Größe von 600×700 Pixeln und einen einheitlichen Hintergrund. Alle Widgets werden in der Methode create_widgets() erstellt, der Spielzustand wird über Instanzvariablen (answer, hint, wrong_guesses, guessed_letters, game_over) verwaltet.
