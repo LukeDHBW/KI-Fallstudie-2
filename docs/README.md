@@ -84,7 +84,6 @@ Dieses Hangman-Spiel zeigt auf einfache Weise, wie ein klassisches Konsolenspiel
 # KI-Fallstudie-2: Abgabe bis 29.5.2026
 
 **Rollenverteilung:**
-
 Lead Developer & GUI Verantwortlicher: Malik
 Testverantwortlicher: Max 
 KI-Reflexionsbeauftragter: Luke 
@@ -92,16 +91,14 @@ Assistant Developer & Dokumentationsbeauftragter: Sohrab
 Präsentationsbeauftragter: Lukasz
 
 **Organisatorischer Ablauf**
-
 Nach Bekanntgabe der Aufgabenstellung im Sommersemester 2026 haben wir uns am 14. Mai 2026 als Gruppe zusammengefunden, um die Aufgabenverteilung für das neue Semester zu besprechen. Die Kommunikation lief wie im Wintersemester über die bestehende WhatsApp-Gruppe, ergänzt durch persönliche Treffen nach den Vorlesungen. Die Rollen wurden neu verhandelt, orientierten sich aber an den Stärken aus dem ersten Semester. Wie zuvor beschreiben die Rollen Hauptverantwortlichkeiten – gegenseitige Unterstützung war selbstverständlich.
 
 **Projektbeschreibung – GUI-Version**
-
 Im zweiten Semester wurde das bestehende Hangman-Konsolenspiel um eine grafische Benutzeroberfläche erweitert. Die Spiellogik aus Game_Hangman.py sowie alle unterstützenden Dateien aus Semester 1 blieben dabei vollständig unverändert erhalten. Die GUI wurde als neue, eigenständige Schicht über die bestehenden Komponenten gelegt und in einer separaten Datei gui.py implementiert. Das Spiel ist nun vollständig über ein Fenster bedienbar – eine Konsole wird nicht mehr benötigt.
 Umgesetzt wurde die Oberfläche mit der Python-Standardbibliothek tkinter, die ohne zusätzliche Installation verfügbar ist.
+![Spielstart – leerer Galgen und verdecktes Wort](docs/screenshots/01_spielstart.png)
 
 **Projektstruktur**
-
 hangman/
     src/
         main.py               # Einstiegspunkt: startet die GUI über gui.main()
@@ -114,7 +111,6 @@ hangman/
 Hinweis zur Struktur: Game_Hangman.py bleibt als erhaltene CLI-Version vollständig im Projekt. Die GUI greift nicht auf diese Datei zurück, sondern implementiert die Spiellogik eigenständig innerhalb der HangmanGUI-Klasse. Gemeinsam genutzt werden weiterhin Words_Hangman.py (Wortauswahl) und Galgen_Hangman.py (ASCII-Darstellung des Galgens über das HANGMAN_ART-Dictionary).
 
 **Technische Umsetzung:**
-
 Die gesamte GUI ist in der Klasse HangmanGUI in gui.py umgesetzt. Das Fenster hat eine feste Größe von 600×700 Pixeln und einen einheitlichen Hintergrund. Alle Widgets werden in der Methode create_widgets() erstellt, der Spielzustand wird über Instanzvariablen (answer, hint, wrong_guesses, guessed_letters, game_over) verwaltet.
 Verwendete Widget-Typen:
 
@@ -133,13 +129,14 @@ Die Enter-Taste im Eingabefeld löst ebenfalls guess_button_click() aus (bind("<
 Der „Neues Spiel"-Button ruft new_game() auf, setzt alle Spielvariablen zurück und aktualisiert alle Anzeigen
 
 **Aktualisierungsmethoden:**
-
 MethodeFunktionupdate_hangman_display()Schreibt die aktuelle ASCII-Grafik aus HANGMAN_ART ins Text-Widgetupdate_word_display()Zeigt den aktuellen Hinweis (z. B. _ _ A _ _) im Label anupdate_error_display()Aktualisiert die Fehleranzeige (Fehler: 2/7)update_guessed_display()Zeigt alle bereits geratenen Buchstaben sortiert an
 Fehlerbehandlung in der GUI:
 Ungültige Eingaben (keine einzelnen Buchstaben, bereits geratene Buchstaben) werden über messagebox.showerror() bzw. messagebox.showwarning() direkt im Fenster zurückgemeldet. Der Spielablauf wird dabei nicht unterbrochen.
+![Gewinn-Dialog](docs/screenshots/04_gewonnen_dialog.png)
+![Verlust-Dialog und Totenkopf-Grafik](docs/screenshots/05_verloren_dialog.png)
+![Fehlermeldung bei ungültiger Eingabe](docs/screenshots/06_fehler_eingabe.png)
 
 **Bedienungsanleitung – GUI-Version**
-
 Das Spiel wird durch Ausführen von main.py gestartet. Es öffnet sich ein Fenster mit dem Galgen, dem aktuellen Wortstand, der Fehleranzeige und dem Eingabefeld. Der Spieler gibt einen einzelnen Buchstaben ein und bestätigt per „Raten"-Button oder Enter-Taste. Nach jeder Eingabe erscheint ein kurzes Dialogfenster mit der Rückmeldung. Bei Gewinn oder Verlust wird das Lösungswort im Dialog angezeigt. Über „Neues Spiel" kann jederzeit eine neue Runde gestartet werden, über „Beenden" wird die Anwendung geschlossen.
 
 **Versionskontrolle**
