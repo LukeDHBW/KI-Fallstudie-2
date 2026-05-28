@@ -107,6 +107,7 @@ hangman/
         Words_Hangman.py      # Wortliste als Tupel (unverändert)  
     docs/  
         README.md  
+
 Hinweis zur Struktur: Game_Hangman.py bleibt als erhaltene CLI-Version vollständig im Projekt. Die GUI greift nicht auf diese Datei zurück, sondern implementiert die Spiellogik eigenständig innerhalb der HangmanGUI-Klasse. Gemeinsam genutzt werden weiterhin Words_Hangman.py (Wortauswahl) und Galgen_Hangman.py (ASCII-Darstellung des Galgens über das HANGMAN_ART-Dictionary).  
 
 **Technische Umsetzung:**  
