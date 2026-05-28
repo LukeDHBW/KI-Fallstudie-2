@@ -95,7 +95,7 @@ Nach Bekanntgabe der Aufgabenstellung im Sommersemester 2026 haben wir uns am 14
 **Projektbeschreibung – GUI-Version**  
 Im zweiten Semester wurde das bestehende Hangman-Konsolenspiel um eine grafische Benutzeroberfläche erweitert. Die Spiellogik aus Game_Hangman.py sowie alle unterstützenden Dateien aus Semester 1 blieben dabei vollständig unverändert erhalten. Die GUI wurde als neue, eigenständige Schicht über die bestehenden Komponenten gelegt und in einer separaten Datei gui.py implementiert. Das Spiel ist nun vollständig über ein Fenster bedienbar – eine Konsole wird nicht mehr benötigt.
 Umgesetzt wurde die Oberfläche mit der Python-Standardbibliothek tkinter, die ohne zusätzliche Installation verfügbar ist.  
-![Spielstart – leerer Galgen und verdecktes Wort](docs/screenshots/01_spielstart.png)
+![Spielstart – leerer Galgen und verdecktes Wort](docs/screenshots/01_spielstart.png.png)
 
 **Projektstruktur**  
 hangman/  
@@ -132,9 +132,9 @@ Der „Neues Spiel"-Button ruft new_game() auf, setzt alle Spielvariablen zurüc
 MethodeFunktionupdate_hangman_display()Schreibt die aktuelle ASCII-Grafik aus HANGMAN_ART ins Text-Widgetupdate_word_display()Zeigt den aktuellen Hinweis (z. B. _ _ A _ _) im Label anupdate_error_display()Aktualisiert die Fehleranzeige (Fehler: 2/7)update_guessed_display()Zeigt alle bereits geratenen Buchstaben sortiert an
 Fehlerbehandlung in der GUI:
 Ungültige Eingaben (keine einzelnen Buchstaben, bereits geratene Buchstaben) werden über messagebox.showerror() bzw. messagebox.showwarning() direkt im Fenster zurückgemeldet. Der Spielablauf wird dabei nicht unterbrochen.
-![Gewinn-Dialog](docs/screenshots/04_gewonnen_dialog.png)  
-![Verlust-Dialog und Totenkopf-Grafik](docs/screenshots/05_verloren_dialog.png)  
-![Fehlermeldung bei ungültiger Eingabe](docs/screenshots/06_fehler_eingabe.png)  
+![Gewinn-Dialog](docs/screenshots/04_gewonnen_dialog.png.png)  
+![Verlust-Dialog und Totenkopf-Grafik](docs/screenshots/05_verloren_dialog.png.png)  
+![Fehlermeldung bei ungültiger Eingabe](docs/screenshots/06_fehler_eingabe.png.png)  
 
 **Bedienungsanleitung – GUI-Version**  
 Das Spiel wird durch Ausführen von main.py gestartet. Es öffnet sich ein Fenster mit dem Galgen, dem aktuellen Wortstand, der Fehleranzeige und dem Eingabefeld. Der Spieler gibt einen einzelnen Buchstaben ein und bestätigt per „Raten"-Button oder Enter-Taste. Nach jeder Eingabe erscheint ein kurzes Dialogfenster mit der Rückmeldung. Bei Gewinn oder Verlust wird das Lösungswort im Dialog angezeigt. Über „Neues Spiel" kann jederzeit eine neue Runde gestartet werden, über „Beenden" wird die Anwendung geschlossen.
