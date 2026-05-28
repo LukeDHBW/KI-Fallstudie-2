@@ -84,11 +84,14 @@ Dieses Hangman-Spiel zeigt auf einfache Weise, wie ein klassisches Konsolenspiel
 # KI-Fallstudie-2: Abgabe bis 29.5.2026
 
 **Rollenverteilung:**
-
 Lead Developer & GUI Verantwortlicher: Malik
+
 Testverantwortlicher: Max 
+
 KI-Reflexionsbeauftragter: Luke 
+
 Assistant Developer & Dokumentationsbeauftragter: Sohrab
+
 Präsentationsbeauftragter: Lukasz
 
 **Organisatorischer Ablauf**
