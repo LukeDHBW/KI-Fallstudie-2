@@ -1,4 +1,4 @@
-# KI-Fallstudie-2
+# KI-Fallstudie
 Gruppenarbeit Programmieren
 Teilnehmer: Luke, Sohrab, Lukasz, Malik, Max
 
@@ -77,4 +77,17 @@ Das Spiel läuft so lange, bis der Spieler entweder alle Buchstaben erraten hat 
 
 Zusammenfassung:
 Dieses Hangman-Spiel zeigt auf einfache Weise, wie ein klassisches Konsolenspiel in Python umgesetzt werden kann. Es verwendet eine feste Wortliste, aus der das Programm zufällig ein Wort auswählt, und ASCII-Grafiken, um den Fortschritt des Spiels visuell darzustellen. Die Hauptlogik befindet sich in der Funktion run_game(), die Eingaben verarbeitet, das Wort überprüft und den aktuellen Spielstand aktualisiert.
+
+
+
+
+# KI-Fallstudie-2: Abgabe bis 29.5.2026
+
+# Rollenverteilung:
+Lead Developer & GUI Verantwortlicher: Malik
+Testverantwortlicher: Max 
+KI-Reflexionsbeauftragter: Luke 
+Assistant Developer & Dokumentationsbeauftragter: Sohrab
+Präsentationsbeauftragter: Lukasz
+
 
