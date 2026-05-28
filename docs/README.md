@@ -16,7 +16,6 @@ Projektbeschreibung:
 Hangman ist ein klassisches Wortspiel, das hier als Konsolenanwendung in Python umgesetzt wurde. Ziel des Projekts ist es, ein interaktives Spiel zu entwickeln, bei dem der Spieler durch das Raten einzelner Buchstaben ein zufällig gewähltes Wort erraten muss. Das Programm zeigt den aktuellen Fortschritt im Wort, bereits geratene Buchstaben und Fehlversuche über ASCII-Grafiken des Galgens an. Kernfunktionen sind die zufällige Auswahl eines Wortes, die Überprüfung der Buchstabeneingaben, die Verwaltung bereits geratener Buchstaben sowie die Ermittlung von Sieg oder Niederlage.
 
 Bedienungsanleitung:
-
 Die Bedienung des Spiels erfolgt über die Konsole, indem die Datei main.py gestartet wird. Anschließend gibt der Spieler in jeder Runde einen einzelnen Buchstaben ein. Das Programm überprüft jede Eingabe und akzeptiert nur gültige Buchstaben; Zahlen oder mehrere Zeichen werden zurückgewiesen. Bereits geratene Buchstaben werden angezeigt, um Doppelraten zu vermeiden. Richtige Buchstaben werden an allen entsprechenden Stellen im Wort sichtbar gemacht, während falsch geratene Buchstaben die Anzahl der Fehlversuche erhöhen und den Galgen schrittweise vervollständigen. Das Spiel endet, sobald alle Buchstaben des Wortes erraten wurden, was als Gewinn angezeigt wird, oder sobald die maximale Anzahl an Fehlversuchen erreicht ist, was eine Verlustmeldung auslöst.
 
 Beispiel Eingaben und Augaben:
@@ -83,22 +82,22 @@ Dieses Hangman-Spiel zeigt auf einfache Weise, wie ein klassisches Konsolenspiel
 
 # KI-Fallstudie-2: Abgabe bis 29.5.2026
 
-**Rollenverteilung:**
-Lead Developer & GUI Verantwortlicher: Malik
-Testverantwortlicher: Max 
-KI-Reflexionsbeauftragter: Luke 
-Assistant Developer & Dokumentationsbeauftragter: Sohrab
-Präsentationsbeauftragter: Lukasz
+**Rollenverteilung:** 
+Lead Developer & GUI Verantwortlicher: Malik  
+Testverantwortlicher: Max  
+KI-Reflexionsbeauftragter: Luke  
+Assistant Developer & Dokumentationsbeauftragter: Sohrab  
+Präsentationsbeauftragter: Lukasz  
 
-**Organisatorischer Ablauf**
+**Organisatorischer Ablauf**  
 Nach Bekanntgabe der Aufgabenstellung im Sommersemester 2026 haben wir uns am 14. Mai 2026 als Gruppe zusammengefunden, um die Aufgabenverteilung für das neue Semester zu besprechen. Die Kommunikation lief wie im Wintersemester über die bestehende WhatsApp-Gruppe, ergänzt durch persönliche Treffen nach den Vorlesungen. Die Rollen wurden neu verhandelt, orientierten sich aber an den Stärken aus dem ersten Semester. Wie zuvor beschreiben die Rollen Hauptverantwortlichkeiten – gegenseitige Unterstützung war selbstverständlich.
 
-**Projektbeschreibung – GUI-Version**
+**Projektbeschreibung – GUI-Version**  
 Im zweiten Semester wurde das bestehende Hangman-Konsolenspiel um eine grafische Benutzeroberfläche erweitert. Die Spiellogik aus Game_Hangman.py sowie alle unterstützenden Dateien aus Semester 1 blieben dabei vollständig unverändert erhalten. Die GUI wurde als neue, eigenständige Schicht über die bestehenden Komponenten gelegt und in einer separaten Datei gui.py implementiert. Das Spiel ist nun vollständig über ein Fenster bedienbar – eine Konsole wird nicht mehr benötigt.
-Umgesetzt wurde die Oberfläche mit der Python-Standardbibliothek tkinter, die ohne zusätzliche Installation verfügbar ist.
+Umgesetzt wurde die Oberfläche mit der Python-Standardbibliothek tkinter, die ohne zusätzliche Installation verfügbar ist.  
 ![Spielstart – leerer Galgen und verdecktes Wort](docs/screenshots/01_spielstart.png)
 
-**Projektstruktur**
+**Projektstruktur**  
 hangman/
     src/
         main.py               # Einstiegspunkt: startet die GUI über gui.main()
@@ -110,7 +109,7 @@ hangman/
         README.md
 Hinweis zur Struktur: Game_Hangman.py bleibt als erhaltene CLI-Version vollständig im Projekt. Die GUI greift nicht auf diese Datei zurück, sondern implementiert die Spiellogik eigenständig innerhalb der HangmanGUI-Klasse. Gemeinsam genutzt werden weiterhin Words_Hangman.py (Wortauswahl) und Galgen_Hangman.py (ASCII-Darstellung des Galgens über das HANGMAN_ART-Dictionary).
 
-**Technische Umsetzung:**
+**Technische Umsetzung:**  
 Die gesamte GUI ist in der Klasse HangmanGUI in gui.py umgesetzt. Das Fenster hat eine feste Größe von 600×700 Pixeln und einen einheitlichen Hintergrund. Alle Widgets werden in der Methode create_widgets() erstellt, der Spielzustand wird über Instanzvariablen (answer, hint, wrong_guesses, guessed_letters, game_over) verwaltet.
 Verwendete Widget-Typen:
 
@@ -128,19 +127,18 @@ Der „Raten"-Button ist mit guess_button_click() verknüpft
 Die Enter-Taste im Eingabefeld löst ebenfalls guess_button_click() aus (bind("<Return>"))
 Der „Neues Spiel"-Button ruft new_game() auf, setzt alle Spielvariablen zurück und aktualisiert alle Anzeigen
 
-**Aktualisierungsmethoden:**
+**Aktualisierungsmethoden:**  
 MethodeFunktionupdate_hangman_display()Schreibt die aktuelle ASCII-Grafik aus HANGMAN_ART ins Text-Widgetupdate_word_display()Zeigt den aktuellen Hinweis (z. B. _ _ A _ _) im Label anupdate_error_display()Aktualisiert die Fehleranzeige (Fehler: 2/7)update_guessed_display()Zeigt alle bereits geratenen Buchstaben sortiert an
 Fehlerbehandlung in der GUI:
 Ungültige Eingaben (keine einzelnen Buchstaben, bereits geratene Buchstaben) werden über messagebox.showerror() bzw. messagebox.showwarning() direkt im Fenster zurückgemeldet. Der Spielablauf wird dabei nicht unterbrochen.
-![Gewinn-Dialog](docs/screenshots/04_gewonnen_dialog.png)
-![Verlust-Dialog und Totenkopf-Grafik](docs/screenshots/05_verloren_dialog.png)
-![Fehlermeldung bei ungültiger Eingabe](docs/screenshots/06_fehler_eingabe.png)
+![Gewinn-Dialog](docs/screenshots/04_gewonnen_dialog.png)  
+![Verlust-Dialog und Totenkopf-Grafik](docs/screenshots/05_verloren_dialog.png)  
+![Fehlermeldung bei ungültiger Eingabe](docs/screenshots/06_fehler_eingabe.png)  
 
-**Bedienungsanleitung – GUI-Version**
+**Bedienungsanleitung – GUI-Version**  
 Das Spiel wird durch Ausführen von main.py gestartet. Es öffnet sich ein Fenster mit dem Galgen, dem aktuellen Wortstand, der Fehleranzeige und dem Eingabefeld. Der Spieler gibt einen einzelnen Buchstaben ein und bestätigt per „Raten"-Button oder Enter-Taste. Nach jeder Eingabe erscheint ein kurzes Dialogfenster mit der Rückmeldung. Bei Gewinn oder Verlust wird das Lösungswort im Dialog angezeigt. Über „Neues Spiel" kann jederzeit eine neue Runde gestartet werden, über „Beenden" wird die Anwendung geschlossen.
 
-**Versionskontrolle**
-
+**Versionskontrolle**  
 Die Weiterentwicklung erfolgte im bestehenden GitHub-Repository. Für die GUI-Erweiterung wurde ein eigener Branch angelegt und nach Fertigstellung per Pull Request in den Hauptbranch gemergt, sodass der ursprüngliche CLI-Code zu jedem Zeitpunkt nachvollziehbar erhalten bleibt.
 
 
